@@ -6,7 +6,10 @@
   "standalone": "MaskedInput",
   "homepage": "https://github.com/insin/react-maskedinput",
   "license": "MIT",
-  "author": "Jonny Buchanan <jonathan.buchanan@gmail.com>",
+  "author": {
+    "name": "Jonny Buchanan",
+    "email": "jonathan.buchanan@gmail.com"
+  },
   "keywords": [
     "react",
     "masked",
@@ -48,6 +51,31 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/insin/react-maskedinput.git"
-  }
+    "url": "git+ssh://git@github.com/insin/react-maskedinput.git"
+  },
+  "gitHead": "06fe4582d87e00cd0450b76ed14a8b676fc27721",
+  "bugs": {
+    "url": "https://github.com/insin/react-maskedinput/issues"
+  },
+  "_id": "react-maskedinput@3.0.0",
+  "_shasum": "0177e8646169373c4a369fcfe898434e3d5eb903",
+  "_from": "react-maskedinput@*",
+  "_npmVersion": "2.11.3",
+  "_nodeVersion": "0.12.7",
+  "_npmUser": {
+    "name": "insin",
+    "email": "jonathan.buchanan@gmail.com"
+  },
+  "dist": {
+    "shasum": "0177e8646169373c4a369fcfe898434e3d5eb903",
+    "tarball": "http://registry.npmjs.org/react-maskedinput/-/react-maskedinput-3.0.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "insin",
+      "email": "jonathan.buchanan@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/react-maskedinput/-/react-maskedinput-3.0.0.tgz"
 }

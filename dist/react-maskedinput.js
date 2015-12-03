@@ -49,7 +49,9 @@ var MaskedInput = React.createClass({displayName: "MaskedInput",
 
   componentWillReceiveProps:function(nextProps) {
     if (this.props.mask !== nextProps.mask) {
+      var sel = getSelection(this.input)
       this.mask.setPattern(nextProps.mask, {value: this.mask.getRawValue()})
+      this.mask.selection = sel
     }
   },
 
@@ -157,15 +159,15 @@ var MaskedInput = React.createClass({displayName: "MaskedInput",
   render:function() {
     var $__0=      this.props,mask=$__0.mask,formatCharacters=$__0.formatCharacters,size=$__0.size,placeholder=$__0.placeholder,props=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{mask:1,formatCharacters:1,size:1,placeholder:1})
     var patternLength = this.mask.pattern.length
-    return React.createElement("input", React.__spread({},  props, 
-      {ref: function(r)  {return this.input = r;}.bind(this), 
-      maxLength: patternLength, 
-      onChange: this._onChange, 
-      onKeyDown: this._onKeyDown, 
-      onKeyPress: this._onKeyPress, 
-      onPaste: this._onPaste, 
-      placeholder: placeholder || this.mask.emptyValue, 
-      size: size || patternLength, 
+    return React.createElement("input", React.__spread({},  props,
+      {ref: function(r)  {return this.input = r;}.bind(this),
+      maxLength: patternLength,
+      onChange: this._onChange,
+      onKeyDown: this._onKeyDown,
+      onKeyPress: this._onKeyPress,
+      onPaste: this._onPaste,
+      placeholder: placeholder || this.mask.emptyValue,
+      size: size || patternLength,
       value: this._getDisplayValue()})
     )
   }
